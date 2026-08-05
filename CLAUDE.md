@@ -18,3 +18,15 @@ No build tooling. Edit `box_viewer.html` and refresh the browser. Three.js r128 
 ## Deployment
 
 GitHub Pages serves from `master` branch root: https://codetrimmer-design.github.io/3d-box-viewer/box_viewer.html
+
+## Installed Skills
+
+Custom skills in `.claude/skills/` for website optimization:
+
+- **frontend-design** — Visual design guidance for distinctive UI
+- **seo-audit** — SEO diagnostics and optimization
+- **lead-magnets** — Email capture and lead generation strategy
+- **ui-ux-pro-max** — UI/UX best practices and design patterns
+- **3dbox-website** — Custom skill combining all above for this project
+
+Use `/3dbox` command for quick project context.
