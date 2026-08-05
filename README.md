@@ -2,6 +2,8 @@
 
 Interactive 3D visualization of a box model (3mm × 3mm × 6mm) built with Three.js.
 
+**[View Live](https://codetrimmer-design.github.io/3d-box-viewer/box_viewer.html)**
+
 ## Files
 
 - `box_viewer.html` - Browser-based 3D viewer with orbit controls
