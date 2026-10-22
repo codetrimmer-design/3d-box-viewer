@@ -1,0 +1,532 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#f68b1e">
+  <title>Sunrise Bakehouse | Fresh bakes in Singapore</title>
+  <meta name="description" content="Small-batch breads, buns and cakes baked fresh every morning in Singapore. Order for pickup or find your nearest Sunrise Bakehouse outlet.">
+  <meta property="og:title" content="Sunrise Bakehouse | Fresh bakes in Singapore">
+  <meta property="og:description" content="Small-batch breads, buns and cakes, baked fresh every morning. Order for pickup or find your nearest outlet.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/hero-croissant.webp">
+  <meta property="og:image:alt" content="Golden butter croissants dusted with sugar.">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap">
+  <link rel="preload" as="image" href="assets/hero-croissant.webp" fetchpriority="high">
+  <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Bakery",
+      "name": "Sunrise Bakehouse",
+      "description": "Small-batch breads, buns and cakes baked fresh every morning in Singapore.",
+      "url": "https://sunrisebakehouse.example",
+      "image": "assets/hero-croissant.webp",
+      "priceRange": "$$",
+      "servesCuisine": "Bakery",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "231 Victoria Street, #01-02",
+        "addressLocality": "Singapore",
+        "postalCode": "188021",
+        "addressCountry": "SG"
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        "opens": "07:00",
+        "closes": "19:00"
+      }
+    }
+  </script>
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <svg class="icon-sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <symbol id="icon-arrow" viewBox="0 0 24 24">
+      <path d="M5 12h14M13 6l6 6-6 6"/>
+    </symbol>
+    <symbol id="icon-check" viewBox="0 0 24 24">
+      <path d="M20 6 9 17l-5-5"/>
+    </symbol>
+    <symbol id="icon-check-circle" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="9"/>
+      <path d="m8 12 2.6 2.6L16.5 9"/>
+    </symbol>
+    <symbol id="icon-menu" viewBox="0 0 24 24">
+      <path d="M4 7h16M4 12h16M4 17h16"/>
+    </symbol>
+    <symbol id="icon-close" viewBox="0 0 24 24">
+      <path d="m6 6 12 12M18 6 6 18"/>
+    </symbol>
+    <symbol id="icon-pin" viewBox="0 0 24 24">
+      <path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z"/>
+      <circle cx="12" cy="10" r="2.5"/>
+    </symbol>
+    <symbol id="icon-clock" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="9"/>
+      <path d="M12 7v5l3 2"/>
+    </symbol>
+    <symbol id="icon-locate" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="3"/>
+      <path d="M12 2v3M12 19v3M2 12h3M19 12h3"/>
+    </symbol>
+    <symbol id="icon-external" viewBox="0 0 24 24">
+      <path d="M7 17 17 7M8 7h9v9"/>
+    </symbol>
+  </svg>
+
+  <div class="announcement" id="announcement" role="region" aria-label="Promotion announcement">
+    <div class="container announcement-inner">
+      <p><strong>The Weekend Box is back:</strong> six pastries for $24. <a href="#promotions">See the box</a></p>
+      <button class="announcement-close" id="announcement-close" type="button" aria-label="Dismiss offer">
+        <svg class="icon" aria-hidden="true"><use href="#icon-close"></use></svg>
+      </button>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="Sunrise Bakehouse home">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-text">
+          <span class="brand-name">Sunrise</span>
+          <span class="brand-sub">Bakehouse</span>
+        </span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Primary">
+        <a href="#bakes">Bakes</a>
+        <a href="#story">Our story</a>
+        <a href="#promotions">Promotions</a>
+        <a href="#locations">Locations</a>
+      </nav>
+
+      <div class="header-actions">
+        <a class="btn btn-primary btn-small" href="#locations" data-focus-finder aria-label="Order pickup">
+          <span class="order-label-long">Order pickup</span>
+          <span class="order-label-short">Order</span>
+        </a>
+        <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+          <svg class="icon icon-menu" aria-hidden="true"><use href="#icon-menu"></use></svg>
+          <svg class="icon icon-close" aria-hidden="true"><use href="#icon-close"></use></svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="mobile-menu" id="mobile-menu" hidden>
+      <nav aria-label="Mobile">
+        <a href="#bakes">Bakes <svg class="icon" aria-hidden="true"><use href="#icon-arrow"></use></svg></a>
+        <a href="#story">Our story <svg class="icon" aria-hidden="true"><use href="#icon-arrow"></use></svg></a>
+        <a href="#promotions">Promotions <svg class="icon" aria-hidden="true"><use href="#icon-arrow"></use></svg></a>
+        <a href="#locations">Locations <svg class="icon" aria-hidden="true"><use href="#icon-arrow"></use></svg></a>
+        <a href="#newsletter">Join the list <svg class="icon" aria-hidden="true"><use href="#icon-arrow"></use></svg></a>
+      </nav>
+      <a class="btn btn-primary" href="#locations" data-focus-finder>Order pickup</a>
+      <p class="menu-meta">Open daily · 7:00am–7:00pm<br>8 outlets across Singapore</p>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-layout">
+        <div class="hero-copy">
+          <p class="kicker"><span class="kicker-dot" aria-hidden="true"></span> Baked fresh since 2002</p>
+          <h1 id="hero-title">Baked before <span>sunrise.</span><br>Gone by lunch.</h1>
+          <p class="hero-lede">Small-batch breads, buns and cakes, made fresh every morning in our neighbourhood bakery. Order for pickup or find your nearest outlet.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary btn-lg" href="#locations" data-focus-finder>
+              Order for pickup
+              <svg class="icon" aria-hidden="true"><use href="#icon-arrow"></use></svg>
+            </a>
+            <a class="btn btn-ghost btn-lg" href="#locations">Find an outlet</a>
+          </div>
+          <ul class="proof-list" aria-label="Why Sunrise Bakehouse">
+            <li><svg class="icon" aria-hidden="true"><use href="#icon-check"></use></svg> Baked every morning</li>
+            <li><svg class="icon" aria-hidden="true"><use href="#icon-check"></use></svg> 8 neighbourhoods</li>
+            <li><svg class="icon" aria-hidden="true"><use href="#icon-check"></use></svg> Since 2002</li>
+          </ul>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-frame">
+            <img
+              src="assets/hero-croissant.webp"
+              alt="Golden butter croissants dusted with sugar."
+              width="1000"
+              height="1250"
+              fetchpriority="high"
+              decoding="async"
+            >
+          </div>
+          <div class="hero-sticker" aria-hidden="true">
+            <span class="sticker-label">First bake</span>
+            <span class="sticker-time">6:40<span>am</span></span>
+          </div>
+          <div class="hero-price-tag">
+            <span>Butter croissant</span>
+            <strong>$4.20</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="shelf" aria-label="Today's counter">
+      <div class="marquee">
+        <div class="marquee-track">
+          <div class="marquee-group">
+            <span class="marquee-item">Butter croissant <em>$4.20</em></span>
+            <span class="marquee-dot" aria-hidden="true"></span>
+            <span class="marquee-item">Cinnamon knot <em>$4.80</em></span>
+            <span class="marquee-dot" aria-hidden="true"></span>
+            <span class="marquee-item">Hokkaido milk loaf <em>$7.50</em></span>
+            <span class="marquee-dot" aria-hidden="true"></span>
+            <span class="marquee-item">Seeded sourdough <em>$8.90</em></span>
+            <span class="marquee-dot" aria-hidden="true"></span>
+            <span class="marquee-item">Pandan kaya bun <em>$3.80</em></span>
+            <span class="marquee-dot" aria-hidden="true"></span>
+            <span class="marquee-item">Pain au chocolat <em>$4.60</em></span>
+            <span class="marquee-dot" aria-hidden="true"></span>
+          </div>
+          <div class="marquee-group" aria-hidden="true">
+            <span class="marquee-item">Butter croissant <em>$4.20</em></span>
+            <span class="marquee-dot"></span>
+            <span class="marquee-item">Cinnamon knot <em>$4.80</em></span>
+            <span class="marquee-dot"></span>
+            <span class="marquee-item">Hokkaido milk loaf <em>$7.50</em></span>
+            <span class="marquee-dot"></span>
+            <span class="marquee-item">Seeded sourdough <em>$8.90</em></span>
+            <span class="marquee-dot"></span>
+            <span class="marquee-item">Pandan kaya bun <em>$3.80</em></span>
+            <span class="marquee-dot"></span>
+            <span class="marquee-item">Pain au chocolat <em>$4.60</em></span>
+            <span class="marquee-dot"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bakes section" id="bakes" aria-labelledby="bakes-title">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="kicker"><span class="kicker-dot" aria-hidden="true"></span> The morning counter</p>
+            <h2 id="bakes-title">The ones you come back for.</h2>
+          </div>
+          <p class="section-lede">A short list of favourites, baked in small batches. The rest of the counter changes with the season.</p>
+        </div>
+
+        <div class="bakes-grid">
+          <article class="bake-card">
+            <div class="bake-media">
+              <img src="assets/bake-croissant.webp" alt="A butter croissant dusted with sugar." width="750" height="938" loading="lazy" decoding="async">
+              <span class="bake-tag">Bestseller</span>
+            </div>
+            <div class="bake-info">
+              <div class="bake-name-row">
+                <h3>Butter croissant</h3>
+                <span class="bake-price">$4.20</span>
+              </div>
+              <p class="bake-desc">Laminated with French butter and baked until the layers shatter.</p>
+              <div class="bake-footer">
+                <span class="allergens">Contains gluten, dairy, egg</span>
+                <a class="bake-order" href="#locations" data-order-product="Butter croissant" aria-label="Order a butter croissant from a nearby outlet">Order <svg class="icon" aria-hidden="true"><use href="#icon-arrow"></use></svg></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="bake-card">
+            <div class="bake-media">
+              <img src="assets/bake-cinnamon.webp" alt="Freshly baked cinnamon knots covered in pearl sugar." width="750" height="938" loading="lazy" decoding="async">
+              <span class="bake-tag">Weekend favourite</span>
+            </div>
+            <div class="bake-info">
+              <div class="bake-name-row">
+                <h3>Cinnamon knot</h3>
+                <span class="bake-price">$4.80</span>
+              </div>
+              <p class="bake-desc">Soft, knotted and finished with cinnamon sugar and a little crunch.</p>
+              <div class="bake-footer">
+                <span class="allergens">Contains gluten, dairy, egg</span>
+                <a class="bake-order" href="#locations" data-order-product="Cinnamon knot" aria-label="Order a cinnamon knot from a nearby outlet">Order <svg class="icon" aria-hidden="true"><use href="#icon-arrow"></use></svg></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="bake-card">
+            <div class="bake-media">
+              <img src="assets/bake-milk-loaf.webp" alt="A soft Hokkaido milk loaf, sliced to show the white crumb." width="750" height="938" loading="lazy" decoding="async">
+              <span class="bake-tag">New</span>
+            </div>
+            <div class="bake-info">
+              <div class="bake-name-row">
+                <h3>Hokkaido milk loaf</h3>
+                <span class="bake-price">$7.50</span>
+              </div>
+              <p class="bake-desc">Cloud-soft shokupan, sliced thick for toast and Saturday mornings.</p>
+              <div class="bake-footer">
+                <span class="allergens">Contains gluten, dairy, egg</span>
+                <a class="bake-order" href="#locations" data-order-product="Hokkaido milk loaf" aria-label="Order a Hokkaido milk loaf from a nearby outlet">Order <svg class="icon" aria-hidden="true"><use href="#icon-arrow"></use></svg></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="bake-card">
+            <div class="bake-media">
+              <img src="assets/bake-sourdough.webp" alt="Seeded sourdough loaves with a flour-dusted crust." width="750" height="938" loading="lazy" decoding="async">
+              <span class="bake-tag">Baked daily</span>
+            </div>
+            <div class="bake-info">
+              <div class="bake-name-row">
+                <h3>Seeded sourdough</h3>
+                <span class="bake-price">$8.90</span>
+              </div>
+              <p class="bake-desc">Long-fermented, deeply crusted and covered in toasted seeds.</p>
+              <div class="bake-footer">
+                <span class="allergens">Contains gluten, sesame</span>
+                <a class="bake-order" href="#locations" data-order-product="Seeded sourdough" aria-label="Order a seeded sourdough loaf from a nearby outlet">Order <svg class="icon" aria-hidden="true"><use href="#icon-arrow"></use></svg></a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="promotions section" id="promotions" aria-labelledby="promotions-title">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="kicker"><span class="kicker-dot" aria-hidden="true"></span> This week at the counter</p>
+            <h2 id="promotions-title">Good things, boxed.</h2>
+          </div>
+          <p class="section-lede">A weekend box for the table, and a weekday pair for the commute. Both are better with coffee.</p>
+        </div>
+
+        <div class="promo-grid">
+          <article class="promo-feature">
+            <div class="promo-feature-copy">
+              <span class="promo-label">Weekend box</span>
+              <h3>Six pastries. One very good morning.</h3>
+              <p>Two butter croissants, two cinnamon knots and two pain au chocolat. Boxed for Saturday or Sunday pickup.</p>
+              <div class="promo-price">$24 <span>save $5.20</span></div>
+              <a class="btn btn-dark" href="#locations" data-order-product="Weekend Box">
+                Order the box
+                <svg class="icon" aria-hidden="true"><use href="#icon-arrow"></use></svg>
+              </a>
+              <p class="fine">Order by Friday, 5pm. Available at all outlets, while stocks last.</p>
+            </div>
+            <img src="assets/promo-pastry.webp" alt="A pile of golden croissants fresh from the oven." width="1000" height="750" loading="lazy" decoding="async">
+          </article>
+
+          <article class="promo-mini">
+            <div>
+              <span class="promo-label">Weekday mornings</span>
+              <h3>The morning pair</h3>
+              <div class="promo-mini-price">$7.50</div>
+              <p>A butter croissant and a long black, weekdays until 11am. The shortest route to a better morning.</p>
+            </div>
+            <a class="text-link" href="#locations">Find an outlet <svg class="icon" aria-hidden="true"><use href="#icon-arrow"></use></svg></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="story section" id="story" aria-labelledby="story-title">
+      <div class="container story-grid">
+        <div class="story-copy">
+          <p class="kicker"><span class="kicker-dot" aria-hidden="true"></span> Our story / Since 2002</p>
+          <h2 id="story-title">Slow dough.<br>Early mornings.</h2>
+          <p>We started with one oven and a simple idea: bake the kind of bread we want to eat every day. Twenty-odd years later, we still mix, fold and bake in small batches, just earlier.</p>
+          <dl class="story-stats">
+            <div>
+              <dt>18h</dt>
+              <dd>Slow ferment</dd>
+            </div>
+            <div>
+              <dt>6:40<span>am</span></dt>
+              <dd>First bake</dd>
+            </div>
+            <div>
+              <dt>8</dt>
+              <dd>Neighbourhoods</dd>
+            </div>
+          </dl>
+          <a class="btn btn-light" href="#locations">Visit an outlet</a>
+        </div>
+        <figure class="story-image">
+          <img src="assets/story-bakery.webp" alt="A warm bakery counter filled with fresh breads and pastries." width="1000" height="750" loading="lazy" decoding="async">
+          <figcaption>Fresh from the morning counter.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="locations section" id="locations" aria-labelledby="locations-title">
+      <div class="container">
+        <div class="locations-head">
+          <div>
+            <p class="kicker"><span class="kicker-dot" aria-hidden="true"></span> Store finder</p>
+            <h2 id="locations-title">Your nearest oven.</h2>
+            <p class="section-lede">Eight outlets across Singapore. Enter your postal code to see pickup options and today's hours.</p>
+          </div>
+          <div class="outlet-count" aria-label="8 outlets across Singapore">
+            <strong>8</strong>
+            <span>outlets across Singapore</span>
+          </div>
+        </div>
+
+        <div class="finder-layout">
+          <form class="finder-form" id="store-form" novalidate>
+            <p class="finder-intent" id="finder-intent">Choose an outlet for pickup.</p>
+            <label for="postal">Postal code</label>
+            <div class="input-row">
+              <input
+                class="postal-input"
+                id="postal"
+                name="postal"
+                type="text"
+                inputmode="numeric"
+                autocomplete="postal-code"
+                maxlength="6"
+                placeholder="e.g. 188021"
+                aria-describedby="postal-hint postal-error"
+              >
+              <button class="btn btn-primary" type="submit">Find outlets</button>
+            </div>
+            <p class="field-error" id="postal-error" role="alert" hidden></p>
+            <button class="locate-button" id="use-location" type="button">
+              <svg class="icon" aria-hidden="true"><use href="#icon-locate"></use></svg>
+              <span>Use my location</span>
+            </button>
+            <p class="finder-hint" id="postal-hint">Try 188021, 168732 or 820123. We use it only to sort outlets by distance.</p>
+            <p class="finder-assurance"><svg class="icon" aria-hidden="true"><use href="#icon-check"></use></svg> Pickup available at all eight outlets.</p>
+          </form>
+
+          <div class="map-panel" aria-hidden="true">
+            <div class="map-top">
+              <span class="map-label">8 outlets / one island</span>
+              <span class="map-note">Schematic map</span>
+            </div>
+            <div class="map-pin" style="left: 22%; top: 20%;"><i></i><b>Woodlands</b></div>
+            <div class="map-pin" style="left: 74%; top: 27%;"><i></i><b>Punggol</b></div>
+            <div class="map-pin" style="left: 50%; top: 40%;"><i></i></div>
+            <div class="map-pin" style="left: 44%; top: 52%;"><i></i></div>
+            <div class="map-pin" style="left: 58%; top: 59%;"><i></i><b>Bugis</b></div>
+            <div class="map-pin" style="left: 38%; top: 68%;"><i></i></div>
+            <div class="map-pin" style="left: 80%; top: 66%;"><i></i><b>Bedok</b></div>
+            <div class="map-pin" style="left: 16%; top: 64%;"><i></i></div>
+            <div class="map-bottom">
+              <span>Directions open in your maps app.</span>
+              <svg class="icon" aria-hidden="true"><use href="#icon-pin"></use></svg>
+            </div>
+          </div>
+        </div>
+
+        <div class="results-head">
+          <h3 id="results-title">A few of our outlets</h3>
+          <p class="results-status" id="results-status" aria-live="polite">Enter a postal code to see the three closest outlets.</p>
+        </div>
+        <div class="outlet-grid" id="outlet-results"></div>
+        <noscript>
+          <p class="fine">Enable JavaScript to use the outlet finder, or visit any of our eight locations across Singapore.</p>
+        </noscript>
+        <p class="fine location-fine">Hours may differ on public holidays. Distances are approximate and measured from your postcode sector.</p>
+      </div>
+    </section>
+
+    <section class="newsletter section" id="newsletter" aria-labelledby="newsletter-title">
+      <div class="container newsletter-grid">
+        <div class="newsletter-copy">
+          <p class="kicker"><span class="kicker-dot" aria-hidden="true"></span> The list</p>
+          <h2 id="newsletter-title">First dibs on the next bake.</h2>
+          <p class="newsletter-lede">Join for seasonal bakes, outlet news and $3 off your first pickup order.</p>
+          <div class="offer-badge" aria-hidden="true">
+            <strong>$3</strong>
+            <span>off your first pickup</span>
+          </div>
+        </div>
+
+        <form class="newsletter-form" id="newsletter-form" novalidate>
+          <div class="form-fields">
+            <label for="email">Email address</label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              autocomplete="email"
+              placeholder="you@example.com"
+              aria-describedby="email-error newsletter-note"
+            >
+            <p class="field-error" id="email-error" role="alert" hidden></p>
+
+            <div class="checkbox-row">
+              <input id="consent" name="consent" type="checkbox" aria-describedby="consent-error">
+              <span class="checkbox-copy"><label for="consent">Yes, send me occasional emails from Sunrise Bakehouse. I can unsubscribe anytime.</label> <a href="#privacy">Read the privacy note.</a></span>
+            </div>
+            <p class="field-error" id="consent-error" role="alert" hidden></p>
+
+            <button class="btn btn-dark btn-full" type="submit">Join the list</button>
+            <p class="form-note" id="newsletter-note">One or two emails a month. Unsubscribe anytime.</p>
+          </div>
+
+          <div class="form-success" id="newsletter-success" role="status" tabindex="-1" hidden>
+            <svg class="icon" aria-hidden="true"><use href="#icon-check-circle"></use></svg>
+            <div>
+              <h3>You're on the list.</h3>
+              <p>Check your inbox to confirm and get your $3 code.</p>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand brand--footer" href="#top" aria-label="Sunrise Bakehouse home">
+            <span class="brand-mark" aria-hidden="true"></span>
+            <span class="brand-text">
+              <span class="brand-name">Sunrise</span>
+              <span class="brand-sub">Bakehouse</span>
+            </span>
+          </a>
+          <p>Small-batch bakes, made fresh every morning in Singapore.</p>
+          <p class="footer-hours">Open daily · 7:00am–7:00pm</p>
+        </div>
+
+        <div class="footer-col">
+          <h3>Explore</h3>
+          <nav class="footer-nav" aria-label="Footer">
+            <a href="#bakes">Bakes</a>
+            <a href="#story">Our story</a>
+            <a href="#promotions">Promotions</a>
+            <a href="#locations">Locations</a>
+            <a href="#newsletter">Join the list</a>
+          </nav>
+        </div>
+
+        <div class="footer-col">
+          <h3>Find us</h3>
+          <p>8 outlets across Singapore.</p>
+          <a class="footer-link" href="#locations">Find your nearest <svg class="icon" aria-hidden="true"><use href="#icon-arrow"></use></svg></a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© <span id="year">2026</span> Sunrise Bakehouse. Concept prototype; content and photography are placeholders.</p>
+        <p id="privacy" class="privacy-note">Privacy note: this prototype validates forms in the browser and does not send or store your email.</p>
+        <a class="back-to-top" href="#top">Back to top <svg class="icon" aria-hidden="true"><use href="#icon-arrow"></use></svg></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
